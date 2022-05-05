@@ -1,12 +1,9 @@
-import { Grid, makeStyles } from "@material-ui/core";
-import Leftbar from "./components/Leftbar";
-import Navbar from "./components/Navbar";
-import Konten from "./components/Konten";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
 import Beranda from "./pages/Beranda";
 import Transaksi from "./pages/Transaksi";
 import Produk from "./pages/Produk";
 import React from "react";
+import { Route, Routes } from "react-router";
 
 const useStyles = makeStyles((theme) => ({}));
 
@@ -15,23 +12,11 @@ function App() {
 
   return (
     <div>
-      {/* <Router>
-        <Routes>
-          <Route exact path="/Beranda" render={() => <Beranda />} />
-          <Route path="/Transaksi" render={() => <Transaksi />} />
-          <Route path="/Produk" render={() => <Produk />} />
-        </Routes>
-      </Router> */}
-
-      <Navbar />
-      <Grid container>
-        <Grid sm={2}>
-          <Leftbar />
-        </Grid>
-        <Grid sm={10}>
-          <Konten />
-        </Grid>
-      </Grid>
+      <Routes>
+        <Route path="/" element={<Beranda />} />
+        <Route path="/Produk" element={<Produk />} />
+        <Route path="/Transaksi" element={<Transaksi />} />
+      </Routes>
     </div>
   );
 }
