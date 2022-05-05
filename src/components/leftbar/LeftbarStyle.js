@@ -19,6 +19,13 @@ export const LeftbarStyle = makeStyles((theme) => ({
     width: theme.spacing(25),
     height: theme.spacing(25),
   },
+  active: {
+    backgroundColor: "#5A5BDA",
+    borderBottom: "1px solid #5A5BDA",
+  },
+  nonActive: {
+    borderBottom: "1px solid #5A5BDA",
+  },
 }));
 
 export default LeftbarStyle;

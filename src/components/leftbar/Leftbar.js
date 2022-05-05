@@ -1,7 +1,7 @@
 import { Drawer, Hidden } from "@material-ui/core";
 import React from "react";
 import { LeftbarStyle } from "./LeftbarStyle";
-import LeftbarDesign from "./LeftbarDesign";
+import LeftbarMenu from "./LeftbarMenu";
 
 function Leftbar({ isMobile, funcsetMobile }) {
   const classes = LeftbarStyle();
@@ -15,7 +15,7 @@ function Leftbar({ isMobile, funcsetMobile }) {
             anchor="left"
             classes={{ paper: classes.drawerpaper }}
           >
-            <LeftbarDesign />
+            <LeftbarMenu />
           </Drawer>
         </Hidden>
         <Drawer
@@ -25,7 +25,7 @@ function Leftbar({ isMobile, funcsetMobile }) {
           classes={{ paper: classes.drawerpaper }}
           onClick={funcsetMobile}
         >
-          <LeftbarDesign />
+          <LeftbarMenu />
         </Drawer>
       </nav>
     </div>

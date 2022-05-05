@@ -16,5 +16,6 @@ export const TopbarStyle = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
+    float: "right",
   },
 }));

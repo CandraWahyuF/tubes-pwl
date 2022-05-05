@@ -3,7 +3,7 @@ import Topbar from "../components/topbar/Topbar";
 import Leftbar from "../components/leftbar/Leftbar";
 import { LayoutStyle } from "./LayoutStyle";
 
-function Layout({ children }) {
+function Layout() {
   const classes = LayoutStyle();
   const [isMobile, setMobile] = useState(false);
   const funcsetMobile = () => {
@@ -16,7 +16,8 @@ function Layout({ children }) {
       <Topbar funcsetMobile={funcsetMobile} />
       <main>
         <div className="classes.topbarWidth" />
-        {children}
+        {/* {children} */}
+        DISINI KONTEN MUNCUL LAH
       </main>
     </div>
   );
